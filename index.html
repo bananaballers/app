@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Ballers</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-top: 40px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #f7d046, #e6b800);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: #2a2a2a;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: #1a3a1a;
+            color: #4ade80;
+            border: 1px solid #2a4a2a;
+            margin-bottom: 20px;
+        }
+
+        .badge.in-progress {
+            background: #3a2a1a;
+            color: #fbbf24;
+            border-color: #4a3a2a;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse 2s infinite;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            background: linear-gradient(135deg, #f7d046, #e6b800);
+            color: #1a1a1a;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #ffe066, #f7d046);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #3a3a3a;
+            color: #6a6a6a;
+        }
+
+        footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            padding-bottom: 20px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .card { padding: 30px; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <h1>🍌 Banana Ballers</h1>
+        <p class="subtitle">Creative projects from the Banana Ballers team<br></p>
+    </header>
+
+    <div class="dashboard-grid">
+
+        <!-- Movie Explainer -->
+        
+        <!-- Pok A Tok -->
+        <div class="card">
+            <div class="card-icon">🏀</div>
+            <h2 class="card-title">Pok A Tok</h2>
+            <p class="card-description">
+                Experience the ancient Mayan ball game brought back to life.
+                A weird, fun, and unique game.
+            </p>
+            <p class="card-description"><strong>Access Code:</strong> 2030</p>
+            <div class="badge">
+                <span class="status-dot"></span>
+                Available Now
+            </div>
+            <a class="btn" href="https://popatok.bananaballers.run.place/" target="_blank">
+                Play Now
+            </a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🌀</div>
+            <h2 class="card-title">Loki</h2>
+            <p class="card-description">
+                This is a 2D adventure where you become Loki and help fight off enemies and relive moments of Loki's story.
+            </p>
+            <p class="card-description"><strong>Access Code:</strong> 2030</p>
+            <div class="badge">
+                <span class="status-dot"></span>
+                Available Now
+            </div>
+            <a class="btn" href="https://loki.bananaballers.run.place/" target="_blank">
+                Play Now
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Banana Ballers
+    </footer>
+
+</div>
+</body>
+</html>
